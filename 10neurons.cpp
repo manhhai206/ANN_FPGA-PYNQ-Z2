@@ -165,10 +165,10 @@ int main() {
             double hidden2_4_error = error_output * w_output4 * sigmoid_derivative(hidden2_4);
             double hidden2_5_error = error_output * w_output5 * sigmoid_derivative(hidden2_5);
             double hidden2_6_error = error_output * w_output6 * sigmoid_derivative(hidden2_6);
-            double hidden2_7_error = error_output * w_output3 * sigmoid_derivative(hidden2_7);
-            double hidden2_8_error = error_output * w_output4 * sigmoid_derivative(hidden2_8);
-            double hidden2_9_error = error_output * w_output5 * sigmoid_derivative(hidden2_9);
-            double hidden2_10_error = error_output * w_output6 * sigmoid_derivative(hidden2_10);
+            double hidden2_7_error = error_output * w_output7 * sigmoid_derivative(hidden2_7);
+            double hidden2_8_error = error_output * w_output8 * sigmoid_derivative(hidden2_8);
+            double hidden2_9_error = error_output * w_output9 * sigmoid_derivative(hidden2_9);
+            double hidden2_10_error = error_output * w_output10 * sigmoid_derivative(hidden2_10);
 
             // Update hidden layer 2 weights
             w2_1_1 -= learning_rate * hidden2_1_error * hidden1_1 * sigmoid_derivative(hidden2_1);
@@ -229,7 +229,7 @@ int main() {
             w2_5_8 -= learning_rate * hidden2_5_error * hidden1_8 * sigmoid_derivative(hidden2_5);
             w2_5_9 -= learning_rate * hidden2_5_error * hidden1_9 * sigmoid_derivative(hidden2_5);
             w2_5_10 -= learning_rate * hidden2_5_error * hidden1_10 * sigmoid_derivative(hidden2_5);
-            bias_2_5 -= learning_rate * hidden2_5_error * sigmoid_derivative(hidden2_1);
+            bias_2_5 -= learning_rate * hidden2_5_error * sigmoid_derivative(hidden2_5);
 
             w2_6_1 -= learning_rate * hidden2_6_error * hidden1_1 * sigmoid_derivative(hidden2_6);
             w2_6_2 -= learning_rate * hidden2_6_error * hidden1_2 * sigmoid_derivative(hidden2_6);
@@ -243,6 +243,7 @@ int main() {
             w2_6_10 -= learning_rate * hidden2_6_error * hidden1_10 * sigmoid_derivative(hidden2_6);
             bias_2_6 -= learning_rate * hidden2_6_error * sigmoid_derivative(hidden2_6);
 
+            w2_7_1 -= learning_rate * hidden2_7_error * hidden1_1 * sigmoid_derivative(hidden2_7);
             w2_7_2 -= learning_rate * hidden2_7_error * hidden1_2 * sigmoid_derivative(hidden2_7);
             w2_7_3 -= learning_rate * hidden2_7_error * hidden1_3 * sigmoid_derivative(hidden2_7);
             w2_7_4 -= learning_rate * hidden2_7_error * hidden1_4 * sigmoid_derivative(hidden2_7);
